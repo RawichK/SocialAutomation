@@ -20,6 +20,8 @@ gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
+gem 'instagram', '1.1.3'
+gem 'sinatra', '1.4.5'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
