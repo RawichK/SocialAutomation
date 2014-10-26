@@ -2,8 +2,8 @@ require "sinatra"
 require "instagram"
 enable :sessions
 
-#CALLBACK_URL = "http://socialautomation.herokuapp.com/callback"
-CALLBACK_URL = "http://localhost:3000/callback"
+CALLBACK_URL = "http://socialautomation.herokuapp.com/callback"
+#CALLBACK_URL = "http://localhost:3000/callback"
 
 SCOPE= "relationships"
 
