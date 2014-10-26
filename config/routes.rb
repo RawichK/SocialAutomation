@@ -1,7 +1,12 @@
 SocialAutomation::Application.routes.draw do
   root 'static_pages#home'
-  match '/callback',    to: 'static_pages#callback',    via: 'get'
-  match '/help',    to: 'static_pages#help',    via: 'get'
+  get 'callback' => 'static_pages#callback'
+  get 'help' => 'static_pages#help'
+  get 'getfollower' => 'sessions#getfollower_req'
+  post 'getfollower' => 'sessions#getfollower_rep'
+  get 'autofollow' => 'sessions#autofollow_req'
+  post 'autofollow' => 'sessions#autofollow_rep'
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

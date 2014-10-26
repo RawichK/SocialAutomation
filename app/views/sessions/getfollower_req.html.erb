@@ -1,0 +1,27 @@
+<%=@targetId%>
+<br>
+<%=#@follower.length
+%>
+
+<br>
+<%=
+
+#html=""
+#for u in @follower
+#  html << "#{u.username} \##{u.id} <img src=#{u.profile_picture}><br>"
+#end
+#html.html_safe
+%>
+-->
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session, url: "/autofollow") do |f| %>
+
+      <%= f.label 'Interval = 20 / Hr' %>
+      <%= #f.text_field :interval
+      %>
+
+      <%= f.submit "Start follow", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
